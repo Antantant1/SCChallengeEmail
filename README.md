@@ -1,2 +1,3 @@
 # SpaceCadets
-Repo for Weekly Challenges
+Repo for Weekly Challenges <br>
+by Anthony Cheung
