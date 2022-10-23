@@ -46,7 +46,8 @@ public class Parser {
       System.err.println("Cannot read file");
     }
     for (String str : stringStatements) {
-      statements.add(stringToStatement(str));
+      Statement current = stringToStatement(str);
+      if (current != null) statements.add(current);
     }
     List<Statement> output = new ArrayList<>();
     processStatements(statements, output);

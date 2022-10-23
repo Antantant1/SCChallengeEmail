@@ -40,6 +40,7 @@ public class Program implements Statement {
 
   @Override
   public void execute(Program p) {
+    System.out.println(statements);
     for (Statement ex : statements) {
       ex.execute(p);
     }
