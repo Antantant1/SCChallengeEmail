@@ -1,0 +1,10 @@
+clear X;
+incr X;
+incr X;
+incr X;
+print X;
+printString Hello, World!;
+while X not 0 do;
+   decr X;
+   print X;
+end;

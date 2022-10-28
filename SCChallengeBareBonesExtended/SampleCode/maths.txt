@@ -1,0 +1,15 @@
+clear x;
+clear y;
+while y not 11 do; #from 0 to 10, so x = 55 after execution
+  #add y to x; add x y;
+  incr y;
+end;
+print x; #55
+print y; #11
+divide x y;
+print x; #5
+print y; #11
+minus y 6;
+print y; #5
+multiply x y;
+print x; #25

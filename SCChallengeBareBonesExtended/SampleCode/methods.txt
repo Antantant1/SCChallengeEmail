@@ -1,0 +1,7 @@
+#method to print hello
+def hello;
+  printString hello;
+end;
+hello;
+hello;
+hello;
