@@ -1,4 +1,4 @@
-public class Print extends UnaryFunction{
+public class Print extends UnaryFunction {
 
     public Print(String variableName) {
         super(variableName);

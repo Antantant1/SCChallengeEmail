@@ -1,4 +1,4 @@
-public class Multiply extends BinaryFunction{
+public class Multiply extends BinaryFunction {
     public Multiply(String variableName1, String variableName2) {
         super(variableName1, variableName2);
     }

@@ -1,4 +1,4 @@
-public class Divide extends BinaryFunction{
+public class Divide extends BinaryFunction {
     public Divide(String variableName1, String variableName2) {
         super(variableName1, variableName2);
     }

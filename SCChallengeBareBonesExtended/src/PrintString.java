@@ -1,8 +1,9 @@
-public class PrintString implements Statement{
+public class PrintString implements Statement {
 
     private String str;
+
     public PrintString(String[] strs) {
-        for(int i = 1; i < strs.length; i++){
+        for (int i = 1; i < strs.length; i++) {
             str += strs[i] + " ";
         }
         str.trim();

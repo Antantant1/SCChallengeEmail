@@ -1,4 +1,4 @@
-public class Minus extends BinaryFunction{
+public class Minus extends BinaryFunction {
     public Minus(String variableName1, String variableName2) {
         super(variableName1, variableName2);
     }

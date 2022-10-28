@@ -1,4 +1,4 @@
-public class Add extends BinaryFunction{
+public class Add extends BinaryFunction {
     public Add(String variableName1, String variableName2) {
         super(variableName1, variableName2);
     }

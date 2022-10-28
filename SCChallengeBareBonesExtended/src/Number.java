@@ -1,38 +1,39 @@
-public class Number implements Data{
+public class Number implements Data {
     private int num;
 
-    public Number(){
+    public Number() {
         num = 0;
     }
-    public Number(int num){
+
+    public Number(int num) {
         this.num = num;
     }
 
-    public void increment(){
+    public void increment() {
         num++;
     }
 
-    public void decrement(){
+    public void decrement() {
         num--;
     }
 
-    public void clear(){
+    public void clear() {
         num = 0;
     }
 
-    public void add(Number n){
+    public void add(Number n) {
         num += n.num;
     }
 
-    public void minus(Number n){
+    public void minus(Number n) {
         num -= n.num;
     }
 
-    public void multiply(Number n){
+    public void multiply(Number n) {
         num *= n.num;
     }
 
-    public void divide(Number n){
+    public void divide(Number n) {
         num /= n.num;
     }
 
@@ -43,8 +44,8 @@ public class Number implements Data{
 
     @Override
     public boolean equals(Object obj) {
-        if(obj == this) return true;
-        if(!(obj instanceof Number)) return false;
+        if (obj == this) return true;
+        if (!(obj instanceof Number)) return false;
         Number n1 = (Number) obj;
         return num == n1.num;
     }

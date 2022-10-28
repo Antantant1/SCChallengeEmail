@@ -11,7 +11,7 @@ public abstract class BinaryFunction implements Statement {
 
     public void setVariable(Program p) { //either creates the variable or get the variable reference to this function
         variable1 = p.getVariable(variableName1);
-        if(variable1 == null){
+        if (variable1 == null) {
             variable1 = tryCreate(variableName1);
         }
         variable2 = p.getVariable(variableName2);
@@ -20,11 +20,11 @@ public abstract class BinaryFunction implements Statement {
         }
     }
 
-    private Variable tryCreate(String variableName){
+    private Variable tryCreate(String variableName) {
         Number number = null;
-        try{
+        try {
             number = new Number(Integer.parseInt(variableName));
-        } catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.err.println(e);
         }
         Variable v = number != null ? new Variable(variableName, number) : null;
@@ -32,7 +32,7 @@ public abstract class BinaryFunction implements Statement {
     }
 
     @Override
-    public void execute(Program p){
-        if(variable1 == null || variable2 == null) setVariable(p);
+    public void execute(Program p) {
+        if (variable1 == null || variable2 == null) setVariable(p);
     }
 }

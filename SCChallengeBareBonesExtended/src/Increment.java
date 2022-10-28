@@ -1,12 +1,12 @@
 public class Increment extends UnaryFunction {
 
-  public Increment(String variableName) {
-    super(variableName);
-  }
+    public Increment(String variableName) {
+        super(variableName);
+    }
 
-  @Override
-  public void execute(Program p) {
-    super.execute(p);
-    variable.numberFunction(MathFunction.INCR);
-  }
+    @Override
+    public void execute(Program p) {
+        super.execute(p);
+        variable.numberFunction(MathFunction.INCR);
+    }
 }
