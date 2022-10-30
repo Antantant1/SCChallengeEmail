@@ -1,4 +1,4 @@
-public class Variable {
+public class Variable implements Data {
     private String name;
     private Data data;
 

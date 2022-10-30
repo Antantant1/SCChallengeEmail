@@ -1,8 +1,11 @@
+import java.util.Arrays;
+
 public class PrintString implements Statement {
 
     private String str;
 
     public PrintString(String[] strs) {
+        str = "";
         for (int i = 1; i < strs.length; i++) {
             str += strs[i] + " ";
         }
@@ -11,7 +14,6 @@ public class PrintString implements Statement {
 
     @Override
     public void execute(Program p) {
-        System.err.println(str);
-        System.out.print(str);
+        System.out.println(str);
     }
 }

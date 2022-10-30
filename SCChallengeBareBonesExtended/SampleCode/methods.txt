@@ -1,7 +1,16 @@
-#method to print hello
-def hello;
-  printString hello;
+def math a b;#two input function, sets a = a + 3b and b = 3b
+  multiply b 3;
+  add a b;
 end;
-hello;
-hello;
-hello;
+clear x;
+clear y;
+add x 10;
+add y 2;
+print x; #10
+print y; #2
+math x y;
+print x; #16
+print y; #6
+math y x;
+print x; #48
+print y; #54

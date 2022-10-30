@@ -1,13 +1,12 @@
 import java.util.HashMap;
 
-public class While extends Method {
+public class While extends Program {
     private Condition condition;
     private String var1;
     private String var2;
     private Compare compareType;
 
     public While(String varName1, String compareType, String varName2) {
-        methodName = "While";
         var1 = varName1;
         var2 = varName2;
         this.compareType = Compare.valueOf(compareType);

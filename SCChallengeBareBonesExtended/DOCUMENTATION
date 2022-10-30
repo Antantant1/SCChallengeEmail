@@ -20,8 +20,14 @@ minus x y; -takes y away from x (x = x - y)
 multiply x y; -multiplies x and y and stores in x (x = x * y)
 divide x y; -divides y from x (x = x / y)
 
+-subroutines don't have access to variables outside of it
 Subroutines: -if the method name is the same as any pre-defined methods, the default pre-defined is used
 def method1; -define method "method1" to the next statements until an end is reached
 def method1 x; -define method with a single input x
 def method1 x1 x2 x3... -define method for many inputs x1..
 method1 x;
+
+If-Else:
+if x not y do; -if x not equal to y, do the if statement, broken on 'end'
+else; -if previous if condition not met; (has to be after an if or will be ignored
+

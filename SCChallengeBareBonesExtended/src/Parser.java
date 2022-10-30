@@ -70,8 +70,10 @@ public class Parser {
             case "divide" -> new Divide(current[1], current[2]);
             case "print" -> new Print(current[1]);
             case "printString" -> new PrintString(current);
-            case "def" -> new Method(current[1]);
-            default -> null;
+            case "def" -> new Method(current);
+            case "if" -> new If(current[1], current[2].toUpperCase(), current[3]);
+            case "else" -> new Else();
+            default -> new NullHolder(current);
         };
     }
 
@@ -83,9 +85,14 @@ public class Parser {
         if (current instanceof End) {
             return output;
         }
-        if (current instanceof Method) {
-            Method method = (Method) current;
-            method.setStatement(processStatements(statements, new ArrayList<>()));
+        if(current instanceof Program){
+            if(current instanceof Else){
+                if(!(output.get(output.size() - 1) instanceof  If)){
+                    return output;
+                }
+                ((If) output.get(output.size() - 1)).setElse((Else) current);
+            }
+            ((Program) current).setStatement(processStatements(statements, new ArrayList<>()));
         }
         output.add(current);
         return processStatements(statements, output);
@@ -103,5 +110,10 @@ public class Parser {
         } catch (Exception e) {
             System.err.println("Cannot read file");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Program";
     }
 }

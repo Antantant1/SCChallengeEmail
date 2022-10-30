@@ -33,6 +33,6 @@ public abstract class BinaryFunction implements Statement {
 
     @Override
     public void execute(Program p) {
-        if (variable1 == null || variable2 == null) setVariable(p);
+        setVariable(p);
     }
 }
