@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public abstract class Program implements Statement {
+public class Program implements Statement {
     private List<Statement> statements;
 
     protected Map<String, Variable> variables;

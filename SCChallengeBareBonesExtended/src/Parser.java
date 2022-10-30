@@ -85,9 +85,9 @@ public class Parser {
         if (current instanceof End) {
             return output;
         }
-        if(current instanceof Program){
-            if(current instanceof Else){
-                if(!(output.get(output.size() - 1) instanceof  If)){
+        if (current instanceof Program) {
+            if (current instanceof Else) {
+                if (!(output.get(output.size() - 1) instanceof If)) {
                     return output;
                 }
                 ((If) output.get(output.size() - 1)).setElse((Else) current);

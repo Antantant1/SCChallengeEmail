@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class PrintString implements Statement {
 
     private String str;
