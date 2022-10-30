@@ -1,0 +1,15 @@
+def fib x y c;
+  clear count;
+  decr c;
+  while count l c; incr count;
+    clear z;
+    add z y;
+    add y x;
+    clear x;
+    add x z;
+  end;
+end;
+clear x;
+incr x;
+fib 0 x 20;
+print x;

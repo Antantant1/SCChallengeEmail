@@ -15,6 +15,7 @@ public class If extends Program {
     }
 
     private void addCondition(Program p) {
+        variables = new HashMap<>(p.variables);
         condition = new Condition(var1, var2, compareType, this);
     }
 
@@ -24,14 +25,11 @@ public class If extends Program {
 
     @Override
     public void execute(Program p) {
-        if (condition == null) {
-            variables = new HashMap<>(p.variables);
-            addCondition(p);
-        }
+        addCondition(p);
         if (condition.checkCondition()) {
             super.execute(p);
         } else {
-            if(e != null) e.runElse(p);
+            if (e != null) e.runElse(p);
         }
     }
 }

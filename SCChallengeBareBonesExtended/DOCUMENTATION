@@ -20,7 +20,7 @@ minus x y; -takes y away from x (x = x - y)
 multiply x y; -multiplies x and y and stores in x (x = x * y)
 divide x y; -divides y from x (x = x / y)
 
--subroutines don't have access to variables outside of it
+-subroutine cannot use variables outside of it
 Subroutines: -if the method name is the same as any pre-defined methods, the default pre-defined is used
 def method1; -define method "method1" to the next statements until an end is reached
 def method1 x; -define method with a single input x

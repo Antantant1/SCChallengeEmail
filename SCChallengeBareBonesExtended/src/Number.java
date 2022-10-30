@@ -1,4 +1,4 @@
-public class Number implements Data, Comparable<Number>{
+public class Number implements Data, Comparable<Number> {
     private int num;
 
     public Number() {

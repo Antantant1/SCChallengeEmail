@@ -25,7 +25,11 @@ public class Method extends Program implements Data {
         }
         variables = new HashMap<>();
         for (int i = 0; i < args.size(); i++) {
-            variables.put(args.get(i), p.getVariable(inputArgs.get(i)));
+            Variable v1 = p.getVariable(inputArgs.get(i));
+            if (v1 == null) {
+                v1 = new Variable(inputArgs.get(i), new Number(Integer.parseInt(inputArgs.get(i))));
+            }
+            variables.put(args.get(i), v1);
         }
         super.execute(this);
     }

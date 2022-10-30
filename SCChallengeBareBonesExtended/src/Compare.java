@@ -6,8 +6,8 @@ public enum Compare {
     L,
     G;
 
-    public boolean check(Variable v1, Variable v2){
-        return switch(this){
+    public boolean check(Variable v1, Variable v2) {
+        return switch (this) {
             case NOT -> !equality(v1, v2);
             case EQ -> equality(v1, v2);
             case LEQ -> lessThan(v1, v2) || equality(v1, v2);
