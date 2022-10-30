@@ -31,7 +31,7 @@ public class If extends Program {
         if (condition.checkCondition()) {
             super.execute(p);
         } else {
-            e.runElse(p);
+            if(e != null) e.runElse(p);
         }
     }
 }

@@ -1,4 +1,4 @@
-public class Number implements Data {
+public class Number implements Data, Comparable<Number>{
     private int num;
 
     public Number() {
@@ -53,5 +53,10 @@ public class Number implements Data {
     @Override
     public int hashCode() {
         return Integer.hashCode(num);
+    }
+
+    @Override
+    public int compareTo(Number o) {
+        return num - o.num;
     }
 }

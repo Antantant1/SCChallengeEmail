@@ -28,6 +28,14 @@ def method1 x1 x2 x3... -define method for many inputs x1..
 method1 x;
 
 If-Else:
-if x not y do; -if x not equal to y, do the if statement, broken on 'end'
+if x not y; -if x not equal to y, do the if statement, broken on 'end'
 else; -if previous if condition not met; (has to be after an if or will be ignored
 
+Compares: -e.g. not, eq, leq, geq, less, greater
+used for if/while
+not,    -not equal to
+eq,     -equal to
+leq,    -less than or equal to
+geq,    -greater than or equal to
+l,      -less than
+g,      -greater than

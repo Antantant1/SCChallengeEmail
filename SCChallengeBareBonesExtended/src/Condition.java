@@ -16,12 +16,6 @@ public class Condition {
     }
 
     public boolean checkCondition() {
-        return switch (compare) {
-            case NOT -> !equality();
-        };
-    }
-
-    private boolean equality() {
-        return v1.getData().equals(v2.getData());
+        return compare.check(v1, v2);
     }
 }
