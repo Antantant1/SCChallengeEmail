@@ -13,7 +13,8 @@ public class Client {
   private BufferedReader input; //read from server
   private String name;
   private ServerReader serverReader;
-  public Client(String ip, int port){
+
+  public Client(String ip, int port) {
     this.ip = ip;
     this.port = port;
     try {
@@ -31,16 +32,16 @@ public class Client {
     input = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
   }
 
-  private void run() throws IOException{
+  private void run() throws IOException {
     serverReader = new ServerReader(input);
     Thread readThread = new Thread(serverReader);
     readThread.start();
     BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     System.out.println("Enter name");
     this.name = bf.readLine().trim();
-    while(true){
+    while (true) {
       String input = bf.readLine();
-      switch(input){
+      switch (input) {
         case "close" -> {
           return;
         }
